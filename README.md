@@ -21,7 +21,7 @@ In most Indian households, electricity bills arrive once every two months, givin
 
 | Component | Purpose |
 |---|---|
-| ESP32 WROOM-32 | Central microcontroller â€” Wi-Fi, data processing, control logic |
+| ESP32 WROOM-32 | Central microcontroller  Wi-Fi, data processing, control logic |
 | ZMPT101B | AC voltage sensing (isolated, analog output) |
 | ACS712 | AC current sensing (Hall-effect based) |
 | Single-channel relay module | Switches appliance load ON/OFF |
