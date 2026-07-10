@@ -10,12 +10,12 @@ In most Indian households, electricity bills arrive once every two months, givin
 
 ## Features
 
-- **Real-time energy monitoring** â€” live voltage, current, and power readings
-- **Remote appliance control** â€” turn devices on/off from anywhere via a mobile app
-- **Consumption threshold alerts** â€” set a target bill/usage limit and get notified when exceeded
-- **Emergency turn-off** â€” instantly cut power to a connected appliance
-- **Load classification** â€” separate light-load and heavy-load control per room
-- **Cloud-based data logging** â€” historical usage trends via Firebase
+- **Real-time energy monitoring**  live voltage, current, and power readings
+- **Remote appliance control**  turn devices on/off from anywhere via a mobile app
+- **Consumption threshold alerts**  set a target bill/usage limit and get notified when exceeded
+- **Emergency turn-off**  instantly cut power to a connected appliance
+- **Load classification**  separate light-load and heavy-load control per room
+- **Cloud-based data logging** historical usage trends via Firebase
 
 ## Hardware
 
@@ -28,36 +28,36 @@ In most Indian households, electricity bills arrive once every two months, givin
 | AC-DC power supply module (220V â†’ 5V) | Powers the ESP32 and sensor modules |
 
 **Pin mapping (ESP32):**
-- GPIO32 â†’ Relay IN
-- GPIO34 â†’ ACS712 analog output (current)
-- GPIO35 â†’ ZMPT101B analog output (voltage)
+- GPIO32 Relay IN
+- GPIO34 ACS712 analog output (current)
+- GPIO35 ZMPT101B analog output (voltage)
 
 ## Software / Architecture
 
-- **Firmware:** Arduino IDE (C/C++) on ESP32 â€” reads sensors, computes power/energy, hosts a local web server, and drives the relay
+- **Firmware:** Arduino IDE (C/C++) on ESP32 reads sensors, computes power/energy, hosts a local web server, and drives the relay
 - **Backend:** Firebase (Realtime Database, Authentication, Cloud Functions, Firebase Cloud Messaging) for data storage, auth, and push alerts
-- **Mobile App:** React Native (cross-platform) â€” live dashboard, remote control panel, notifications, budget/threshold settings
+- **Mobile App:** React Native (cross-platform)  live dashboard, remote control panel, notifications, budget/threshold settings
 
 ### Data Flow
 ```
-Power Supply â†’ Voltage/Current Sensing (ZMPT101B, ACS712)
-            â†’ ESP32 reads & computes power/energy
-            â†’ Threshold check
-            â†’ Data pushed to Cloud (Firebase)
-            â†’ Mobile App displays data / sends control commands
-            â†’ ESP32 activates/deactivates relay
+Power Supply Voltage/Current Sensing (ZMPT101B, ACS712)
+            ESP32 reads & computes power/energy
+            Threshold check
+             Data pushed to Cloud (Firebase)
+            Mobile App displays data / sends control commands
+            ESP32 activates/deactivates relay
 ```
 
 ## Results (from testing)
 
-- Voltage readings accurate within Â±2V, current within Â±0.2A vs. reference multimeter
+- Voltage readings accurate within ±2V, current within ±0.2A vs. reference multimeter
 - Relay response time from mobile command to physical switching: **under 1 second**
 - Ran continuously for 72+ hours with stable Wi-Fi/cloud connectivity and no component failure
 - Passed functionality, usability, reliability, performance, and safety testing (isolation, overload handling, short-circuit protection)
 
 ## Total Hardware Cost
 
-~â‚¹1,524 (ESP32, sensors, relay, power supply, connectors, enclosure)
+‚¹1,524 (ESP32, sensors, relay, power supply, connectors, enclosure)
 
 ## Firmware Snippet
 
@@ -76,4 +76,4 @@ I worked on this as part of a 5-member team, contributing to sensor integration 
 
 ## Team
 
-Rio Roy Â· Varghese Selestin Â· Athul K S Â· Mohammed Shan Â· Nayana S M
+Rio Roy · Varghese Selestin · Athul K S · Mohammed Shan · Nayana S M
