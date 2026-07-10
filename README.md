@@ -1,4 +1,4 @@
-# IEMS â€“ IoT Based Energy Management System
+# IEMS - IoT Based Energy Management System
 
 An IoT-based system that lets users monitor real-time electricity consumption and remotely control household appliances through a mobile app â€” built to address the problem of high, unexplained electricity bills and appliances left running unattended.
 
